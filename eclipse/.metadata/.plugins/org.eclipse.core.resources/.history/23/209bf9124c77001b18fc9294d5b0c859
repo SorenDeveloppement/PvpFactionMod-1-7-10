@@ -1,0 +1,15 @@
+package fr.galaglow.modpvpfaction.world;
+
+import cpw.mods.fml.common.IWorldGenerator;
+
+public class WorldRegister {
+	
+	public static void mainRegistry() {
+		
+	}
+	
+	public static void RegisterWorldGen(IWorldGenerator iGenerator) {
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package fr.galaglow.modpvpfaction.blocks;
+
+import net.minecraft.block.material.Material;
+
+public class MineraiSaphir {
+
+	public MineraiSaphir(Material rock) {
+		super();
+	}
+
+}

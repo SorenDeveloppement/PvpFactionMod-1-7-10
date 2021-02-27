@@ -1,0 +1,34 @@
+package fr.galaglow.modpvpfaction.init;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import fr.galaglow.modpvpfaction.PvpMod;
+import fr.galaglow.modpvpfaction.Reference;
+import fr.galaglow.modpvpfaction.blocks.BlockRubis;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemStack;
+
+public class BlockMod {
+	
+	public static Block rubis_block;
+	
+	public static void init() {
+		
+		rubis_block = new BlockRubis(Material.rock).setBlockName("Rubis Ore").setCreativeTab(PvpMod.PvpTab).setBlockTextureName(Reference.MODID + ":minerai_rubis");
+		rubis_block = new BlockRubis(Material.rock).setBlockName("Saphir Ore").setCreativeTab(PvpMod.PvpTab).setBlockTextureName(Reference.MODID + ":minerai_saphir");
+		
+	}
+	
+	public static void register() {
+		
+		GameRegistry.registerBlock(rubis_block, rubis_block.getUnlocalizedName().substring(5));
+		
+	}
+	
+	public static void addRecipe() {
+		
+		GameRegistry.addSmelting(rubis_block, new ItemStack(ItemMod.rubis), 10f);
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+package fr.galaglow.modpvpfaction.init;
+
+import fr.galaglow.modpvpfaction.PvpMod;
+import fr.galaglow.modpvpfaction.Reference;
+import fr.galaglow.modpvpfaction.blocks.BlockRubis;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class BlockMod {
+	
+	public static Block rubis_block;
+	
+	public static void init() {
+		
+		rubis_block = new BlockRubis(Material.rock).setBlockName("Rubis Block").setCreativeTab(PvpMod.PvpTab).setBlockTextureName(Reference.MODID + ":rubis_block");;
+		
+	}
+	
+	public static void register() {
+		
+	}
+	
+	public static void addRecipe() {
+		
+	}
+
+}

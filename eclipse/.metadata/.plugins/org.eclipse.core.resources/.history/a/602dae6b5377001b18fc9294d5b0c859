@@ -1,0 +1,17 @@
+package fr.galaglow.modpvpfaction.init;
+
+public class BlockMod {
+	
+	public static void init() {
+		
+	}
+	
+	public static void register() {
+		
+	}
+	
+	public static void addRecipe() {
+		
+	}
+
+}

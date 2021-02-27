@@ -1,0 +1,61 @@
+package fr.galaglow.modpvpfaction.init;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+
+public class PatatoBag extends Item{
+	
+	static int MAX_AMMOUNT = 300;
+	
+	public static boolean addPotatoes(ItemStack bag, int increment) {
+		
+		initTagCompound(bag);
+		int numberOfPotateos = getNumberOfPotatoes(bag);
+		if (numberOfPotateos >= MAX_AMMOUNT)
+			return false;
+		
+		bag.getTagCompound().setInteger("potatoAmmount", numberOfPotateos + increment);
+		return true;
+	}
+
+	private static int getNumberOfPotatoes(ItemStack bag) {
+		
+		initTagCompound(bag);
+		return bag.getTagCompound().getInteger("potatoAmmount");
+	}
+	
+	public static boolean removePotateos(ItemStack bag, int decrement) {
+		
+		initTagCompound(bag);
+		int numberOfPotateos = getNumberOfPotatoes(bag);
+		
+		if (numberOfPotateos < decrement)
+			return false;
+		
+		bag.getTagCompound().setInteger("potatoAmount", numberOfPotateos - decrement);
+		
+		return true;
+	}
+
+	private static void initTagCompound(ItemStack bag) {
+		
+		if (!bag.hasTagCompound()) {
+			
+			NBTTagCompound comp = new NBTTagCompound();
+			comp.setInteger("potatoAmmount", 0);
+			bag.setTagCompound(comp);
+			
+		}
+		
+		if (!bag.getTagCompound().hasKey("potatoAmmount")) {
+			
+			NBTTagCompound comp = bag.getTagCompound();
+			comp.setInteger("potatoAmmount", 0);
+			bag.setTagCompound(comp);
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package fr.galaglow.modpvpfaction;
+
+public class Reference {
+
+	public static final String MODID = "pvpfaction";
+	public static final String MOD_NAME = "Pvp Faction icronome";
+    public static final String VERSION = "1.0";
+    public static final String CLIENT_PROXY = "fr.galaglow.modpvpfaction.proxy.ClientProxy";
+    public static final String SERVER_PROXY = "fr.galaglow.modpvpfaction.proxy.CommonProxy";
+	
+}

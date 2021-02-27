@@ -1,0 +1,9 @@
+package fr.galaglow.modpvpfaction.init;
+
+public class EventMod {
+	
+	public static void init() {
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package fr.galaglow.modpvpfaction.init;
+
+import net.minecraft.item.Item;
+
+public class ItemStickStrength extends Item{
+	
+	
+
+}

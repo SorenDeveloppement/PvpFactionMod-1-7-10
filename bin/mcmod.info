@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pvpfaction",
+  "name": "Pvp Faction icronome",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Gala_Glow"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,62 @@
+package fr.galaglow.modpvpfaction;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fr.galaglow.modpvpfaction.init.BlockMod;
+import fr.galaglow.modpvpfaction.init.ItemMod;
+import fr.galaglow.modpvpfaction.proxy.CommonProxy;
+
+@Mod(modid = Reference.MODID, name = Reference.MOD_NAME, version = Reference.VERSION)
+public class PvpMod
+{
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
+    public static CommonProxy proxy;
+    
+    public static CreativeTabs PvpTab = new CreativeTabs("PvPTab") {
+    	
+    	@SideOnly(Side.CLIENT)
+    	public Item getTabIconItem()
+    	{
+    		return ItemMod.iron_stick;
+    	}
+    	
+    };
+	
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+    	
+    	ItemMod.init();
+    	ItemMod.register();
+    	ItemMod.addRecipe();
+    	BlockMod.init();
+    	BlockMod.register();
+    	BlockMod.addRecipe();
+		
+    }
+    
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+    	
+		proxy.registerRenders();
+		
+    }
+    
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+    	
+    	
+		
+    }
+}

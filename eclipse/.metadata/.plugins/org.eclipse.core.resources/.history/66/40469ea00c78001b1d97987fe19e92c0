@@ -1,0 +1,46 @@
+package fr.galaglow.modpvpfaction.event;
+
+import java.awt.Event;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
+import fr.galaglow.modpvpfaction.init.ItemMod;
+import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.IChatComponent;
+import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
+
+public class ChangeDrop {
+
+	@SubscribeEvent
+	public void BlockDestroy(HarvestDropsEvent events) {
+
+		if (events.block == Blocks.double_plant) {
+
+			events.drops.add(new ItemStack(ItemMod.flower_of_heal));
+			if (events.harvester.getItemInUse().equals(ItemMod.super_gantlet)) {
+				
+				events.dropChance = 3 / 1000;
+				
+			}else {
+				events.dropChance = 1 / 1000;
+			}
+			
+			events.drops.add(new ItemStack(ItemMod.flower_of_jump));
+			events.dropChance = 1 / 1000;
+			
+			events.drops.add(new ItemStack(ItemMod.flower_of_strength));
+			events.dropChance = 1 / 10000;
+			
+			events.drops.add(new ItemStack(ItemMod.flower_of_speed));
+			events.dropChance = 1 / 10000;
+			
+		}
+
+	}
+
+}

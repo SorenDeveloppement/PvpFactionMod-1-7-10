@@ -1,0 +1,25 @@
+package fr.galaglow.modpvpfaction.event;
+
+import java.awt.Event;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import fr.galaglow.modpvpfaction.init.ItemMod;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
+
+public class ChangeDrop {
+	
+	@SubscribeEvent
+	public void BlockDestroy(HarvestDropsEvent events) {
+		
+		if (events.block == Blocks.double_plant) {
+			
+			events.drops.add(new ItemStack(ItemMod.flower_of_heal));
+			events.dropChance = 100;
+			
+		}
+		
+	}
+
+}

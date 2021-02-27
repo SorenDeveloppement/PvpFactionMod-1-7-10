@@ -1,0 +1,24 @@
+package fr.galaglow.modpvpfaction.init;
+
+import fr.galaglow.modpvpfaction.blocks.BlockRubis;
+import net.minecraft.block.Block;
+
+public class BlockMod {
+	
+	public static Block rubis_block;
+	
+	public static void init() {
+		
+		rubis_block = new BlockRubis();
+		
+	}
+	
+	public static void register() {
+		
+	}
+	
+	public static void addRecipe() {
+		
+	}
+
+}

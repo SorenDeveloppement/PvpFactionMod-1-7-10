@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.Mod.EventHandler"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.event.FMLPreInitializationEvent"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.Mod"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.SidedProxy"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.event.FMLInitializationEvent"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.event.FMLPostInitializationEvent"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.Reference"/>
+    <fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.ExampleMod"/>
+    <fullyQualifiedTypeName name="net.minecraft.potion.PotionEffect"/>
+    <fullyQualifiedTypeName name="net.minecraft.potion.Potion"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.IWorldGenerator"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.gen.feature.WorldGenMinable"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.world.WorldRegister"/>
+    <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.blocks.BlockRubis"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.init.BlockMod"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.blocks.MineraiRubis"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.init.EventMod"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.eventhandler.SubscribeEvent"/>
+    <fullyQualifiedTypeName name="java.awt.Event"/>
+    <fullyQualifiedTypeName name="net.minecraft.block.BlockBreakable"/>
+    <fullyQualifiedTypeName name="cpw.mods.fml.common.gameevent.PlayerEvent"/>
+    <fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent"/>
+    <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+    <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+    <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+    <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.crafting.IRecipe"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.init.ItemMod"/>
+    <fullyQualifiedTypeName name="ibxm.Player"/>
+    <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+    <fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+    <fullyQualifiedTypeName name="fr.galaglow.modpvpfaction.PvpMod"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+</qualifiedTypeNameHistroy>

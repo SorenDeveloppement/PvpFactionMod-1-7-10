@@ -1,0 +1,28 @@
+package fr.galaglow.modpvpfaction.init;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+public class PatatoBag extends Item{
+	
+	public static boolean addPotatoes(ItemStack bag, int increment) {
+		
+		initTagCompound(bag);
+		int numberOfPotatoes = getNumberOfPotatoes(bag);
+		if (numberOfPotatoes >= MAX_AMMOUNT)
+			return false;
+		
+	}
+
+	private static int getNumberOfPotatoes(ItemStack bag) {
+		
+		initTagCompound(bag);
+		return bag.getTagCompound().getInteger("potatoAmount");
+	}
+
+	private static void initTagCompound(ItemStack bag) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+Saros.resource_selection.checked.-Last\ selection-=/Minecraft**\#**
+Saros.resource_selection.preset_names=-Last selection-**\#**
+eclipse.preferences.version=1
+saros.coloridsets=<list>\n  <colorIDSet>\n    <assignedUserColorIDs>\n      <entry>\n        <string>mecmec78@saros-con.imp.fu-berlin.de</string>\n        <saros.editor.colorstorage.UserColorID>\n          <current>2</current>\n          <favorite>2</favorite>\n        </saros.editor.colorstorage.UserColorID>\n      </entry>\n      <entry>\n        <string>galaglow@saros-con.imp.fu-berlin.de</string>\n        <saros.editor.colorstorage.UserColorID>\n          <current>0</current>\n          <favorite>-1</favorite>\n        </saros.editor.colorstorage.UserColorID>\n      </entry>\n    </assignedUserColorIDs>\n    <timestamp>1614255013912</timestamp>\n  </colorIDSet>\n  <colorIDSet>\n    <assignedUserColorIDs>\n      <entry>\n        <string>galaglow@saros-con.imp.fu-berlin.de</string>\n        <saros.editor.colorstorage.UserColorID>\n          <current>0</current>\n          <favorite>-1</favorite>\n        </saros.editor.colorstorage.UserColorID>\n      </entry>\n    </assignedUserColorIDs>\n    <timestamp>1614255386357</timestamp>\n  </colorIDSet>\n</list>
+ui.sarosview.sashweight.left=500
+ui.sarosview.sashweight.right=500

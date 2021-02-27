@@ -1,0 +1,42 @@
+INFO  10:09:58,031 [Worker-39: Session Startup] (ConsistencyAction.java:172) Starting Saros 16.0.1 running:
+  Java Version: 15.0.1
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.19.0.v20200724-1004
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  10:09:58,085 [Worker-39: Session Startup] (ConsistencyAction.java:172) initializing context...
+INFO  10:09:59,111 [Worker-39: Session Startup] (ConsistencyAction.java:172) initializing preference default values
+INFO  10:09:59,235 [Worker-39: Session Startup] (ConsistencyAction.java:172) successfully initialized context
+WARN  13:09:51,922 [Worker-39: Session Startup] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+INFO  13:09:52,586 [Worker-39: Session Startup] (SarosSessionManager.java:272) session started
+DEBUG 13:09:52,602 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_451262255@conference.saros-con.imp.fu-berlin.de/galaglow@saros-con.imp.fu-berlin.de/Saros with state: active
+DEBUG 13:10:13,385 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_451262255@conference.saros-con.imp.fu-berlin.de/mecmec78@saros-con.imp.fu-berlin.de/Saros with state: active
+INFO  13:10:13,925 [Worker-25: Inviting mecmec78@saros-con.imp.fu-berlin.de (mecmec78@saros-con.imp.fu-berlin.de)...] (SarosSession.java:354) user mecmec78@saros-con.imp.fu-berlin.de/Saros joined session
+ERROR 13:10:32,158 [Worker-39: Synchronizing projects] (FileListFactory.java:176) java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+INFO  13:16:03,559 [Worker-39: Synchronizing projects] (SarosSession.java:360) user mecmec78@saros-con.imp.fu-berlin.de/Saros started queuing projects and can receive IResourceActivities
+ERROR 13:16:25,622 [Worker-39: Synchronizing projects] (Negotiation.java:348) OPN [remote side: mecmec78@saros-con.imp.fu-berlin.de/Saros] I/O error occurred
+java.io.IOException: org.eclipse.core.runtime.CoreException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at saros.filesystem.EclipseWorkspaceImpl.run(EclipseWorkspaceImpl.java:102)
+	at saros.negotiation.ArchiveOutgoingProjectNegotiation.createProjectArchive(ArchiveOutgoingProjectNegotiation.java:184)
+	at saros.negotiation.ArchiveOutgoingProjectNegotiation.prepareTransfer(ArchiveOutgoingProjectNegotiation.java:97)
+	at saros.negotiation.AbstractOutgoingProjectNegotiation.run(AbstractOutgoingProjectNegotiation.java:117)
+	at saros.ui.eventhandler.NegotiationHandler$OutgoingProjectJob.run(NegotiationHandler.java:144)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at saros.filesystem.EclipseWorkspaceImpl$EclipseRunnableAdapter.run(EclipseWorkspaceImpl.java:54)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at saros.filesystem.EclipseWorkspaceImpl.run(EclipseWorkspaceImpl.java:96)
+	... 5 more
+Caused by: java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:249)
+	at saros.negotiation.CreateArchiveTask.run(CreateArchiveTask.java:102)
+	at saros.filesystem.EclipseWorkspaceImpl$EclipseRunnableAdapter.run(EclipseWorkspaceImpl.java:43)
+	... 8 more
+ERROR 13:16:25,904 [Worker-39: Synchronizing projects] (Negotiation.java:438) canceled negotiation OPN [remote side: mecmec78@saros-con.imp.fu-berlin.de/Saros], error: I/O failure: org.eclipse.core.runtime.CoreException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+INFO  13:16:34,540 [saros-remove-mecmec78@saros-con.imp.fu-berlin.de/Saros] (SarosSession.java:468) user mecmec78@saros-con.imp.fu-berlin.de/Saros left session
+INFO  13:19:17,375 [saros-StopSession] (SarosSessionManager.java:332) session stopped
+INFO  17:59:01,865 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  17:59:01,874 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  17:59:02,258 [Framework stop - Equinox Container: 7ef31936-fb3a-4768-9f78-15428b38bf59] (Saros.java:137) Stopping Saros 16.0.1

@@ -1,0 +1,23 @@
+WARN  13:09:51,922 [Worker-39: Session Startup] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+ERROR 13:10:32,158 [Worker-39: Synchronizing projects] (FileListFactory.java:176) java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+ERROR 13:16:25,622 [Worker-39: Synchronizing projects] (Negotiation.java:348) OPN [remote side: mecmec78@saros-con.imp.fu-berlin.de/Saros] I/O error occurred
+java.io.IOException: org.eclipse.core.runtime.CoreException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at saros.filesystem.EclipseWorkspaceImpl.run(EclipseWorkspaceImpl.java:102)
+	at saros.negotiation.ArchiveOutgoingProjectNegotiation.createProjectArchive(ArchiveOutgoingProjectNegotiation.java:184)
+	at saros.negotiation.ArchiveOutgoingProjectNegotiation.prepareTransfer(ArchiveOutgoingProjectNegotiation.java:97)
+	at saros.negotiation.AbstractOutgoingProjectNegotiation.run(AbstractOutgoingProjectNegotiation.java:117)
+	at saros.ui.eventhandler.NegotiationHandler$OutgoingProjectJob.run(NegotiationHandler.java:144)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at saros.filesystem.EclipseWorkspaceImpl$EclipseRunnableAdapter.run(EclipseWorkspaceImpl.java:54)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at saros.filesystem.EclipseWorkspaceImpl.run(EclipseWorkspaceImpl.java:96)
+	... 5 more
+Caused by: java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:249)
+	at saros.negotiation.CreateArchiveTask.run(CreateArchiveTask.java:102)
+	at saros.filesystem.EclipseWorkspaceImpl$EclipseRunnableAdapter.run(EclipseWorkspaceImpl.java:43)
+	... 8 more
+ERROR 13:16:25,904 [Worker-39: Synchronizing projects] (Negotiation.java:438) canceled negotiation OPN [remote side: mecmec78@saros-con.imp.fu-berlin.de/Saros], error: I/O failure: org.eclipse.core.runtime.CoreException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
